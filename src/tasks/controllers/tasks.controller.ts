@@ -17,7 +17,8 @@ export class TasksController {
 
    @Post()
    createOne(@Body() body): any {
-      return body;
+     // return body;
+      return this.taskService.createTask(body)
    }
 
    @Put(':id')

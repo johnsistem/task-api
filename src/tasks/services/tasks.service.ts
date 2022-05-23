@@ -16,6 +16,13 @@ export class TaskService {
     return this.tasksRepo.find()
 
    }
+   createTask(body:any) {
+      const newtask = new Task;
+      newtask.name = body.name;
+      newtask.description = body.description;
+      this.tasksRepo.save(newtask);
+      return true;
+   }
 
 
 }
